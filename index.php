@@ -16,7 +16,7 @@
 get_header(); ?>
 
 
-	<div id="content" role="main">
+	<div id="content" role="main" class="content-area">
 			<?php 
 			$template_names = array();
 			

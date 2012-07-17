@@ -6,18 +6,17 @@
  */
 add_action( 'widgets_init', 'zero_widgets_init' );
 function zero_widgets_init() {
-  
   $widget_areas = array(
     'primary-sidebar' => array(
       'name' => __('Primary Sidebar', 'zero'),
-      'before_widget' => '<li id="%1$s" class="%2$s">',
+      'before_widget' => '<li id="%1$s" class="widget %2$s">',
       'after_widget' => '</li>',
       'before_title' => '<h4>',
       'after_title' => '</h4>',
     ),
     'footer-area' => array(
       'name' => __('Footer Area', 'zero'),
-      'before_widget' => '<div id="%1$s" class="%2$s">',
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget' => '</div>',
       'before_title' => '<h4>',
       'after_title' => '</h4>',
@@ -33,5 +32,5 @@ function zero_widgets_init() {
     
     register_sidebar( $args );
   }
-  
 }
+

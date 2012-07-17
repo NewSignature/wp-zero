@@ -2,14 +2,14 @@
 </div>
 
 
-<footer role="contentinfo" id="footer">
+<footer role="contentinfo" id="footer" class="site-footer">
 
 
 <?php
 	//get_sidebar( 'footer' );
 ?>
 
-			<div id="site-info">
+			<div class="site-info">
 				<a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 				&copy; <?php 
 				$current_year = (int) date('Y');

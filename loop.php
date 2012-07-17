@@ -38,7 +38,7 @@
 	 * Without further ado, the loop:
 	 */ ?>
 <?php while ( have_posts() ) : the_post(); ?>
-  <article <?php post_class(); ?>>
+  <article <?php post_class('article'); ?>>
     <header>
       <h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
       <?php the_post_thumbnail(); ?>
@@ -57,7 +57,7 @@
   </article>
 <?php endwhile; // End the loop. Whew. ?>
 
-<?php echo zero_paginate_index_links(); ?>
+<nav class="pager"><?php echo zero_paginate_index_links(); ?></nav>
 </div>
 
 

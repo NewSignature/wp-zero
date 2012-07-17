@@ -16,7 +16,7 @@
 
 <?php // Password protected ?>
 <?php if ( post_password_required() ) : ?>
-  <section id="comments">
+  <section id="comments" class="comments">
     <p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'zero' ); ?></p>
 	</section><!-- #comments -->
  

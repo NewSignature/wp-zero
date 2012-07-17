@@ -1,0 +1,17 @@
+/* line 1, ../assets/sass/screen.scss */
+.screen-reader-text {
+  position: absolute;
+  display: block;
+  left: -9999px;
+}
+
+/* line 7, ../assets/sass/screen.scss */
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* line 12, ../assets/sass/screen.scss */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,7 +1,6 @@
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-  <article <?php post_class(); ?>>
+  <article <?php post_class('article'); ?>>
     <header>
-      <h1 ><?php the_title(); ?></h1>
       
       
       <?php // 1) Link to the parent post, this is used for Pages, attachments, and custom post-types that are hierarchical ?>
@@ -11,11 +10,10 @@
           ?></a></span>
       <?php endif; ?>
       
-      <?php // 2) Display the post thumbnail ?>
-      <?php the_post_thumbnail(); ?>
+   
       
       <?php // 3) Display the publish date of the post ?>
-      <time pubdate datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date(); ?> - <?php the_time(); ?></time>
+      
       
       <?php // 4) Display and link to the author ?>
       <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>
@@ -38,7 +36,7 @@
       
       <?php // 9) Display attachment meta data ?>
       <?php if ( is_attachment() && $metadata = wp_get_attachment_metadata()) {
-        echo '<dl>';
+        echo '<dl class="attachments">';
         foreach($metadata as $key => $val) {
         	echo '<dt>'.$key.'</dt>';
         	echo '<dd>';
@@ -74,7 +72,7 @@
     
     <footer>
       <?php edit_post_link( __( 'Edit', 'zero' ), ' <span class="edit-link">', '</span>' ); ?>
-      <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'zero' ), 'after' => '</div>' ) ); ?>
+      <?php wp_link_pages( array( 'before' => '<div class="pager">' . __( 'Pages:', 'zero' ), 'after' => '</div>' ) ); ?>
     </footer>
   
   <?php comments_template( '', true ); ?>

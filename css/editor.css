@@ -1,0 +1,6 @@
+/* line 1, ../assets/sass/editor.scss */
+body.mcecontentbody {
+  padding: 0.6em;
+  margin: 0;
+  font: normal normal normal 15px/20px/sans-serif;
+}
