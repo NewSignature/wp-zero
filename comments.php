@@ -25,10 +25,10 @@
   <?php // Display the comments ?>
 	<?php if( have_comments() ) : ?>
 	
-				<h2><?php
+				<h4><?php
 				printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'zero' ),
 				number_format_i18n( get_comments_number() ), '<cite>' . get_the_title() . '</cite>' );
-				?></h2>
+				?></h4>
 	
 	
 	
@@ -43,6 +43,7 @@
 					?>
           
 	  <?php // Comment navigation ?>
+
 	  <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 				<?php previous_comments_link( __( 'Older Comments' ) ); ?>
 				<?php next_comments_link( __( 'Newer Comments' ) ); ?>

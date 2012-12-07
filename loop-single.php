@@ -1,5 +1,6 @@
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 <article <?php post_class(); ?> itemscope="" itemtype="http://schema.org/Article">
+
   <header>
     <h1 itemprop="name headline"><?php the_title(); ?></h1>
 
@@ -74,7 +75,8 @@
 
   <div itemprop="articleBody"><?php the_content(); ?></div>
 
-  <footer>
+  <footer class="meta">
+    <meta itemprop="interactionCount" content="UserComments:<?php echo get_comments_number(); ?>"/>
     <?php edit_post_link( __( 'Edit', 'zero' ), ' <span class="edit-link">', '</span>' ); ?>
     <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'zero' ), 'after' => '</div>' ) ); ?>
   </footer>
