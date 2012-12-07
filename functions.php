@@ -1,9 +1,13 @@
 <?php
 
+include "Bootstrap.php";
+
+
+
 define( 'ZERO_VERSION_NUMBER', '0.0.3' );
 
 /**
- * Loads the default theme supported features. Subthemes can remove them with remove_theme_support
+ * Loads the default theme supported features. Subthemes can be removed with remove_theme_support
  *  
  */
 add_action( 'after_setup_theme', 'zero_setup', 1 ); // Run as soon as possible
@@ -19,9 +23,6 @@ function zero_setup() {
   
   // Adds the Zero base set of CSS files (LES): reset.less, editor.less, and prose.less (requires zero-less theme support)
   add_theme_support( 'zero-css-base' );
-
-  // Adds support for LESS to be used for the CSS files
-  add_theme_support( 'zero-less' );
   
   // Configures the WYSIWYG editor to use the styles in prose.less along with reset.less and editor.less
   add_theme_support( 'zero-css-editor' );
@@ -76,9 +77,7 @@ function zero_setup() {
   
   // Add the nav element to acceptable elements for the menu
   add_theme_support( 'zero-nav-menu-container' );
-  
-  // Adds the Javascript part of formalize.css to add placeholder and autofocus to older browsers. (The CSS file, formalize.css, ala css/formalize.less, is included as part of zero-base-css)
-  add_theme_support( 'zero-formalize' );
+
   
   // Give you helper functions to work with the nav menus 
   add_theme_support( 'zero-nav-menu-helpers' );

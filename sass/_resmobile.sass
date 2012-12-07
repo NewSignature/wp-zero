@@ -1,0 +1,9 @@
+// responsive menu
+.resmenu
+  nav[role="navigation"]
+    // untoggled menu is here
+    &.expanded
+      // on click of menu toggler, the 'expanded' class is added to the nav
+      li
+        &.current-menu-item
+          // current-menu-item is added automatically by wordpress to the current li

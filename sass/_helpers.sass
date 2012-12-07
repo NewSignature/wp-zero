@@ -1,0 +1,36 @@
+// wordpress specific styles
+.alignright
+  float: right
+  margin: 10px 0 10px 10px
+.alignleft
+  float: left
+  margin: 10px 10px 10px 0
+
+// general
+.success, .error
+  +border-radius
+  padding: 5px
+  margin: 10px 0
+  color: #ffffff
+.success
+  background-color: #468847
+.error
+  background-color: #f89406
+
+// visually hide except from screen readers
+.visuallyhidden
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+  &.focusable:active, &.focusable:focus
+    clip: auto
+    height: auto
+    margin: 0
+    overflow: visible
+    position: static
+    width: auto

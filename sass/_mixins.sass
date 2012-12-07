@@ -1,0 +1,46 @@
+@mixin dbg
+  outline: 1px solid red
+
+@mixin font($size, $weight: 300, $height: round($size * 1.35))
+  font-size: $size
+  line-height: $height
+  font-weight: $weight
+
+// send rem-font font size & line height in pixels
+// both pixel and rem sizes will be rendered
+// $size is what you want, $baseFontSize is the base size (hopefully still 10px) set in normalize.sass
+// example: rem-font(1.4) means font-size: 14px and font-size: 1.4rem
+@mixin rem-font($size, $weight: 300, $height: round($size * 1.35))
+  font-size: round($size)
+  line-height: round($height)
+  font-weight: $weight
+  font-size: $size / $baseFontSize + rem
+  line-height: $height / $baseFontSize + rem
+
+@mixin link-color($base, $hover: lighten($base, 10%), $active: $hover, $visited: $hover)
+  color: $base
+  &:hover
+    color: $hover
+  &:active
+    color: $active
+  &:visited
+    color: $visited
+
+// hidden from everyone
+@mixin invisible
+  display: none
+  visibility: hidden
+
+// make visible (usually used to un-invisible the above mixin)
+@mixin visible
+  display: block
+  visibility: visible
+
+
+@mixin simple-clearfix
+  *zoom: 1
+  &:after, &:before
+    content: " "
+    display: table
+  &:after
+    clear: both

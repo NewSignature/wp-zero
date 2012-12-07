@@ -16,7 +16,7 @@
 get_header(); ?>
 
 
-	<div id="content" role="main">
+	<div id="main" role="main">
 			<?php 
 			$template_names = array();
 			
@@ -87,6 +87,6 @@ get_header(); ?>
 			// Then we call the right loop
 			zero_get_template_part( 'loop', $template_names ); ?>
 	</div><!-- #content -->
- 
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

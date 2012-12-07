@@ -1,0 +1,38 @@
+// use this to normalize elements
+
+html
+  height: 100%
+  font-size: $baseFontSize
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+  -webkit-font-smoothing: antialiased
+
+body
+  color: #4d4d4d
+  *
+    max-width: 100%
+
+em
+  font-style: italic
+
+strong
+  font-weight: 600
+
+blockquote
+  margin: 20px 0
+  padding: 2%
+
+a
+  +link-color(lighten($darkblue, 10%), $darkblue)
+  text-decoration: none
+  &:hover, &:visited, &:active
+    text-decoration: underline
+
+button
+  display: block
+  cursor: pointer
+
+// the "skip" link
+.skip
+  position: absolute
+  left: -999em

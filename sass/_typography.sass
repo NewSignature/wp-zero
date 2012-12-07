@@ -1,0 +1,30 @@
+// http://lamb.cc/typograph/
+
+h1, h2, h3, h4, h5, h6
+  color: $darkblue
+  font-family: $sans
+
+
+
+
+
+// these size and paddings are for desktop
+// so you can add different sizes with media queries if desired
+body
+  +rem-font($baseFontSize * 1.4, 400, $baseFontSize * 2.1)
+
+h1
+  +rem-font($baseFontSize * 2.6, 900)
+  padding: round($baseFontSize * 1.75) 0
+
+h2
+  +rem-font($baseFontSize * 2.2, 700)
+  padding: round($baseFontSize * 1.73) 0
+
+h3
+  +rem-font($baseFontSize * 1.6, 600)
+  padding: round($baseFontSize * 1.5) 0
+
+h4
+  +rem-font($baseFontSize * 1.2, 500)
+  padding: round($baseFontSize * 1.1) 0

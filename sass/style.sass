@@ -1,0 +1,62 @@
+//
+//Theme Name: Zero
+//Theme URI: http://newsignature.com/
+//Description: A base theme for developing custom WordPress themes
+//Author: New Signature
+//Version: 0.0.3
+//Tags: reset base
+//
+
+
+@import compass/reset
+@import compass/css3
+@import compass/utilities
+
+// mixins and other constants
+@import _variables
+@import _mixins
+
+// normalize
+@import _normalize
+
+// typography
+@import _typography
+
+// helper css classes
+@import _helpers
+
+// grid, if needed
+// @import _grid
+
+
+
+
+// base is all things needed for at least mobile
+// style for mobile first, then gradually build up to regular 1240+ desktop
+@import _base
+
+// larger than an iPhone; smaller than a tablet
+@media only screen and (min-width: 481px)
+  @import _481up
+
+// responsive menu is used for 767px or less, but you can change this as needed
+@media only screen and (max-width: 767px)
+  @import _resmobile.sass
+
+// tablet
+@media only screen and (min-width: 768px)
+  @import _768up
+
+// smallish desktops or landscape tablets
+@media only screen and (min-width: 1030px)
+  @import _1030up
+
+// regular desktop
+@media only screen and (min-width: 1240px)
+  @import _1240up
+
+
+
+// printing styles
+@media print
+  @import _print
