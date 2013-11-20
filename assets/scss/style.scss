@@ -1,0 +1,21 @@
+/*
+ *  Install Compass and SingularityGS
+ *
+ *  gem install compass
+ *  gem install singularitygs
+ *
+ *  SingularityGS - http://vimeo.com/63509346
+ *
+ *  File name convention:
+ *  _noun-adjective.scss
+ *
+ */
+
+@import "compass";
+@import "compass/reset";
+@import "singularitygs";
+
+@import "01_utilities/all";
+@import "02_atoms/all";
+@import "03_molecules/all";
+@import "04_organisms/all";

@@ -1,0 +1,12 @@
+$grids: 4;
+$grids: add-grid(2 at $seed);
+$grids: add-grid(4 at $sprout);
+$grids: add-grid(6 at $sapling);
+$grids: add-grid(9 at $bush);
+$grids: add-grid(12 at $tree);
+
+.container {
+  @include background-grid;
+  min-height: 100%;
+
+}
