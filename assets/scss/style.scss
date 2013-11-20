@@ -1,8 +1,9 @@
 /*
- *  Install Compass and SingularityGS
+ *  Install Compass, SingularityGS and Modular Scale
  *
  *  gem install compass
  *  gem install singularitygs
+ *  gem install modular-scale
  *
  *  SingularityGS - http://vimeo.com/63509346
  *
@@ -14,6 +15,7 @@
 @import "compass";
 @import "compass/reset";
 @import "singularitygs";
+@import "modular-scale";
 
 @import "01_utilities/all";
 @import "02_atoms/all";
