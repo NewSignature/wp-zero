@@ -17,6 +17,8 @@ As well, in the `inc` directory you'll find a Template class, `template.php`. Th
 
 Javascript assets are provided by Grunt and Bower, and both Javascript and CSS assets are compiled and minified by Grunt. To edit CSS or Javascript, you'll need to install both Grunt and Bower. They each require installation of [nodeJS](http://nodejs.org/). 
 
+Before you start, if you are using a Windows machine for this, you have to have Git installed so that it uses the Windows command line. You'll see an option in the Git GUI setup process to allow it to use Window CLI - you want that option selected! If you're using OSX, linux, or a Vagrant box inside Windows, you don't have to worry about this because Git uses CLI be default.
+
 If this is your first time using Grunt and Bower, you'll need to install them. First, install Grunt:
 
 
