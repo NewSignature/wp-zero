@@ -61,7 +61,7 @@ The theme root contains a `Gruntfile.js` which defines all the grunt processes. 
 
 The `grunt watch` command performs javascript actions and emits Live Reload, but you can call the uglify command directly by running `grunt uglify`. Both these commands build up the Javscripts in the `assets/js/source` directory and puts the compiled versions in the `assets/js/build` directory.
 
-Just like with CSS, the Javascript files are included in the theme via the `library/inc/scripts.php` file. The Wordpress function [wp_enqueue_style](http://codex.wordpress.org/Function_Reference/wp_enqueue_script) is used for this, and [conditional tags](http://codex.wordpress.org/Conditional_Tags) are used to load per page javascripts.
+Just like with CSS, the Javascript files are included in the theme via the `inc/scripts.php` file. The Wordpress function [wp_enqueue_style](http://codex.wordpress.org/Function_Reference/wp_enqueue_script) is used for this, and [conditional tags](http://codex.wordpress.org/Conditional_Tags) are used to load per page javascripts.
 
 ### Adding New Javascript
 
